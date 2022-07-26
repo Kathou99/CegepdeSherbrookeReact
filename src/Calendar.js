@@ -3,6 +3,22 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./Calendar.css";
 export default function Calendar()
+//QuerySelector in React:
+   const ref = useRef(null);
+
+  useEffect(() => {
+    // 👇️ use a ref (best)
+    //ref= value you want to set
+    const el2 = ref.current;
+    console.log(el2);
+    //je pense qui existe setREF() que tu peut te faire un prop
+
+    // 👇️ use document.querySelector()
+    // should only be used when you can't set a ref prop on the element
+    // (you don't have access to the element)
+    const el = document.querySelector('#ul');
+    console.log(el);
+  }, []);
 {
   return (
     <div className="Calendar">
